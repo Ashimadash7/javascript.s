@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- CSS code-->
+
+		<style>
+			/*apply css properties to body tag*/
+
+			body {
+				position: absolute;
+				left: 0%;
+				text-align: center;
+			}
+
+			/*apply css properties to container class*/
+
+			.container {
+				justify-content: center;
+				align-items: center;
+				display: flex;
+				height: 100%;
+				text-align: center;
+			}
+
+			/*apply css properties to button tag*/
+
+			button {
+				width: 90px;
+				height: 60px;
+				font-size: 30px;
+				background-color: green;
+				color: honeydew;
+			}
+
+			/*apply hover effect to button tag*/
+
+			button:hover {
+				background-color: rgb(255, 47, 47);
+				color: grey;
+			}
+
+			/*apply css properties to h2 tag*/
+
+			h2 {
+				color: rgb(101, 23, 23);
+				margin: 0 50px;
+				font-size: 45px;
+			}
+			/*apply css properties to h1 tag*/
+
+			h1 {
+				font-size: 35px;
+				color: rgb(88, 4, 4);
+				text-align: center;
+				padding-left: 10%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- give a suitable heading using h1 tag-->
+		<h1>Increment and Decrement counter</h1>
+
+		<div ="container">
+			<!-- adding button and heading to show the digits -->
+			<!-- increment() and decrement() functions on button click-->
+			<button onclick="increment()">+</button>
+			<h2 id="counting"></h2>
+			<button onclick="decrement()">-</button>
+		</div>
+		<!-- JavaScript code-->
+		<script>
+			//initialising a variable name data
+			var data = 0;
+
+			//printing default value of data that is 0 in h2 tag
+			document.getElementById("counting").innerText = data;
+
+			//creation of increment function
+			function increment() {
+				data = data + 1;
+				document.getElementById("counting").innerText = data;
+			}
+			//creation of decrement function
+			function decrement() {
+				data = data - 1;
+				document.getElementById("counting").innerText = data;
+			}
+		</script>
+	</body>
+</html>
